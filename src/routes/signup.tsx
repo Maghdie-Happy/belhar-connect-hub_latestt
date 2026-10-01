@@ -42,7 +42,7 @@ function SignUp() {
   const toggleSkill = (s: string) =>
     setSkills((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s]));
 
-  const confirmationUrl = () => `https://belhar-connect-hublatestt.vercel.app/login?confirmed=1`;
+  const fullName = String(formData.get("fullName") ?? "").trim();
   const handleSignUp = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(null);
